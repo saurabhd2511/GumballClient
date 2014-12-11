@@ -33,7 +33,7 @@ exports.putCall=function(req,res){
 	var password="rucha";
 	MongoClient.connect("mongodb://"+userName+":"+password+"@ds043200.mongolab.com:43200/ruchacmpe281", function(err, db) {
 		  if(!err) {
-		    console.log("We are connected");
+		    console.log("Connected to DB");
 		    var collection=db.collection('gumball');
 		    collection.find({id:id}).toArray(function(err,docs){
 		    	
