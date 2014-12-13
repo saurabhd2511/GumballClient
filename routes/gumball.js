@@ -31,7 +31,7 @@ exports.putCall=function(req,res){
 	var id=parseInt(req.params.id);
 	var userName="saurabh";
 	var password="123456";
-	MongoClient.connect("mongodb://"+userName+":"+password+"@ds043190.mongolab.com:43190", function(err, db) {
+	MongoClient.connect("mongodb://"+userName+":"+password+"@ds043190.mongolab.com:43190/gumball/1", function(err, db) {
 		  if(!err) {
 		    console.log("Connected to DB");
 		    var collection=db.collection('gumball');
